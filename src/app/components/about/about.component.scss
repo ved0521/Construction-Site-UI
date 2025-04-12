@@ -1,0 +1,120 @@
+.about-us-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.text-content {
+  width: 50%;
+}
+
+.text-content h4 {
+  color: #fa881e;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+.text-content p {
+  color: #555;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.text-content .read-more-btn {
+  background-color: #fa881e;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.text-content .read-more-btn:hover {
+  background-color: #e67e1b;
+}
+
+.image-content {
+  width: 50%;
+  text-align: right;
+}
+// Testimonal Section
+.testimonial_text {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 36px;
+  display: inline-block;
+}
+
+// Testimonal Section End
+
+/* Slider Container */
+.slider {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Track for Sliding Items */
+.slide-track {
+  display: flex;
+  gap: 0; /* Remove the gap from the flex container */
+  animation: scroll 30s linear infinite;
+  /* Dynamically adjust the width based on slide count */
+  width: max-content;
+}
+
+/* Individual Slide */
+.slide {
+  display: flex;
+  font-style: italic;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px; 
+}
+
+/* Text Style */
+.text-slide {
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 1px #000; /* Text border */
+  color: transparent; /* Make inside of text transparent */
+}
+
+.text-slide:hover {
+  color: #fa881e;
+  -webkit-text-stroke: 1px #fa881e;
+}
+
+/* Pause animation on hover */
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+/* Scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%); /* Shift full width of track */
+  }
+}
+
+
+
+
+

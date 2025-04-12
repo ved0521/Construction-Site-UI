@@ -1,0 +1,118 @@
+<!-- Career Section -->
+<section class="bg-gray-100 flex items-center justify-center min-h-[750px] px-4 sm:px-6 lg:px-20">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between">
+    <div class="max-w-lg text-center lg:text-left">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+        <span> Join Our Team At</span>
+        <p class="text-3xl sm:text-4xl lg:text-5xl text-orange-500 font-serif font-bold pt-2">VYOMN</p>
+      </h2>
+      <p class="text-gray-600 pt-5 text-sm sm:text-md lg:text-lg break-all">
+        Work at the most dynamic and successful agency. In order to meet the growing demand for quality construction, we are
+        continuously on the lookout for talent to help us maintain our reputation as the nation’s most reliable, quality builder & Architecture.
+      </p>
+      <button (click)="showAndScrollToJobOpenings()" class="mt-5 bg-orange-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-orange-600">
+        View Openings
+      </button>
+    </div>
+    <img src="assets/carrerIcon.png" alt="Interview Illustration"
+         class="hidden sm:block w-full max-w-md lg:max-w-xl h-auto">
+  </div>
+</section>
+
+<section *ngIf="showJobOpenings" id="job-openings" class="container mx-auto p-6">
+  <h2 class="text-3xl text-gray-900 text-center pb-4">CURRENT OPENINGS</h2>
+  <mat-divider class="!text-gray-300 mb-4"></mat-divider>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header class="mt-2">
+        <div class="flex items-center justify-between">
+          <h1 class="text-2xl font-medium text-gray-800">Architectural Designer</h1>
+        </div>
+      </mat-expansion-panel-header>
+      <div class="flex flex-col gap-4 text-sm">
+        <div class="flex gap-1">
+          <span class="font-medium">Job Type:</span>
+          <span class="text-gray-500">Full</span>
+        </div>
+        <div class="flex items-center">
+          <div class="flex gap-1">
+            <span class="font-medium">Location:</span>
+            <a href="https://maps.app.goo.gl/VJjUDaA4Wu6gC6pi8" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-location-dot text-sm text-orange-500 hover:text-orange-700"></i>
+            </a>
+            <span class="text-gray-500 hover:text-orange-500">
+              <a href="https://maps.app.goo.gl/VJjUDaA4Wu6gC6pi8" target="_blank" rel="noopener noreferrer">Bahadurgarh</a>
+            </span>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <span class="font-medium">Experience:</span>
+          <span class="text-gray-600">2-3 years</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col space-y-2">
+        <h2 class="font-medium pt-3 ">JOB DESCRIPTION:</h2>
+        <p class="text-gray-500 text-sm">
+          We are seeking a creative and detail-oriented Architectural Designer with 2-3 years of professional experience to
+          join our dynamic team. The ideal candidate should be proficient in SketchUp, 3Ds Max, and presentation/working drawings,
+          with a strong foundation in architectural and interior design. You will collaborate closely with our project team to
+          create innovative and functional design solutions that meet client expectations and comply with building codes.
+        </p>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <h2 class="font-medium pt-5">Key Responsibilities:</h2>
+        <ul class="list-disc text-gray-500 text-sm space-y-1">
+          <li>Prepare high-quality working drawings and presentation drawings using SketchUp, 3Ds Max, and other design tools.</li>
+          <li>Develop and contribute to architectural and interior design concepts for residential, commercial, and mixed-use projects.</li>
+          <li>Ensure all designs are compliant with building codes, regulations, and client specifications.</li>
+          <li>Coordinate and collaborate with internal teams and external stakeholders to ensure smooth project delivery.</li>
+          <li>Assist in creating detailed interior layouts, material specifications, and visualization outputs for client presentations.</li>
+          <li>Review and revise designs based on feedback to meet project goals and deadlines.</li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col space-y-2">
+        <!-- Consistent gap -->
+        <h2 class="font-medium text-md pt-3">Key Skills & Qualifications:</h2>
+        <ul class="list-disc text-gray-500 text-sm space-y-2">
+          <!-- Added spacing -->
+          <li>2-3 years of professional experience in architectural design and interior projects.</li>
+          <li>Proficiency in SketchUp, 3Ds Max, and working drawings.</li>
+          <li>Strong expertise in architectural and interior designing, including presentation drawings.</li>
+          <li>Good understanding of building codes and standards.</li>
+          <li>Ability to collaborate effectively within a multidisciplinary team.</li>
+          <li>Excellent communication skills in English and Hindi.</li>
+          <li>Attention to detail, creativity, and a solution-oriented mindset.</li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col space-y-2">
+        <h2 class="font-medium text-md pt-3">Preferred Attributes:</h2>
+        <ul class="list-disc text-gray-500 text-sm space-y-2">
+          <li>Degree/Diploma in Architecture or Interior Design.</li>
+          <li>Ability to manage multiple projects efficiently and meet deadlines.</li>
+          <li>Passion for design innovation and staying updated with current industry trends</li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col space-y-2">
+        <h2 class="font-medium pt-5">Role: Architect </h2>
+        <p class="text-gray-500 text-sm">
+          If you are passionate about creating inspiring spaces and have the required skills and experience, we would love to hear from you!
+        </p>
+      </div>
+      <div class="flex flex-col space-y-2 pt-3">
+        <p class="font-medium text-md">
+          Apply now by sending your CV and portfolio to <a href="mailto:vyomnprojecctsgmail.com" class=" text-sm text-lightOrange hover:underline"> ranjeet.sharrma&#64;vyomnprojeccts.com</a>
+        </p>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-divider></mat-divider>
+</section>
+
+
+
+
+

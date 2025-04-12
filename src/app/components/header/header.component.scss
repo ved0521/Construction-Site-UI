@@ -1,0 +1,92 @@
+/* Desktop Styles for Navigation Menu */
+.menu-item {
+  position: relative;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  color: #fa881e;
+}
+
+.menu-item:after {
+  content: "";
+  position: absolute;
+  background-color: #fa881e;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -23px;
+}
+
+.menu-item:hover:after {
+  width: 100%;
+  transition: all 0.9s;
+}
+
+.menu-item.active {
+  color: #fa881e; 
+}
+
+.menu-item:hover:after {
+  width: 100%;
+  transition: all 0.9s;
+}
+
+.menu-item.active {
+  color: #fa881e;
+}
+
+.menu-item.active:after {
+  width: 100%;
+  transition: none;
+}
+/* Mobile Styles for Navigation Menu */
+@media (max-width: 1024px) {
+  .button-mobile {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 1px;
+    color: white;
+    display: inline-flex;
+    width: 120%;
+    margin-top: 5px;
+    transition: background-color 0.5s ease;
+  }
+
+  .button-mobile:hover {
+    color: #fff;
+    background-color: #fa881e;
+  }
+
+  .button-mobile:after {
+    content: none;
+  }
+
+  /* Active state styles */
+  .button-mobile.active {
+    color: #fa881e; 
+    background-color: #fff; 
+  }
+  .button-mobile.active:after {
+    width: 100%; 
+    transition: none; 
+  }
+  
+}
+.header-transparent {
+  background: transparent !important;
+  transition: background-color 0.3s ease;
+}
+
+.header-colored {
+  background-color: #1a1a2e !important;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  #header {
+    background-color: #1a1a2e !important;
+  }
+}

@@ -1,0 +1,50 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+
+li {
+  position: relative;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+li:hover {
+  color: #fa881e;
+}
+
+li:after {
+  content: "";
+  position: absolute;
+  background-color: #fa881e;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0px;
+}
+
+li:hover:after {
+  width: 100%;
+  transition: all 0.9s;
+}
+
+li.active {
+  color: #fa881e;
+}
+
+li.active:after {
+  width: 100%;
+  transition: none;
+}
+
+

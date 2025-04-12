@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field .mdc-notched-outline__notch {
+  border-right-style: hidden;
+}
+/* Remove box shadow and border-radius */
+.mat-expansion-panel {
+  box-shadow: none !important;
+  background: white !important;
+  margin: 15px 0;
+  padding: 10px 20px;
+  transition: none;
+  border-radius: 0 !important; 
+}
+
+.mat-expansion-panel-header {
+  background: white !important;
+  border-radius: 0 !important;
+}
+

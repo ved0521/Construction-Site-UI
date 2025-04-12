@@ -1,0 +1,86 @@
+<div id="header" class="flex justify-between items-center bg-[#1a1a2e] h-[66px] w-full px-5 fixed z-10 top-0">
+    <!-- Logo Section -->
+    <div class="grid items-center pt-1">
+        <span class="justify-self-center w-[45px] h-[22px] rounded-t-[55px] border-4 border-solid border-lightOrange border-b-0"></span>
+        <span class="text-xl text-white font-serif font-bold mt-[-3px]">VYOMN</span>
+        <span class="justify-self-end text-xs font-medium text-lightOrange mt-[-5px]">Projeccts</span>
+    </div>
+
+    <!-- Mobile Button and Toggle -->
+    <div class="lg:hidden flex gap-4">
+        <button routerLink="/home" class="bg-lightOrange hover:bg-darkOrange text-white font-semibold py-2 px-3 rounded-lg">
+            Let's Talk
+        </button>
+        <button class="text-white focus:outline-none w-[40px] h-[40px] flex items-center justify-center" (click)="toggleMenu()">
+            <i class="fa-solid text-xl w-[20px] text-center" [ngClass]="isMenuOpen ? 'fa-xmark':'fa-bars'"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden fixed inset-0 z-50" *ngIf="isMenuOpen" (click)="toggleMenu()">
+        <div class="absolute top-[65px] inset-y-0 right-0 w-64 bg-gray-800">
+            <nav>
+              <ul class="flex flex-col gap-4 font-medium">
+                <li>
+                  <a class="button-mobile cursor-pointer" [class.active]="selectedMenu === 'Home'" (click)="selectMenu('Home')" routerLink="/home" fragment="sliderSection">Home</a>
+                </li>
+                <li>
+                  <a class="button-mobile cursor-pointer" [class.active]="selectedMenu === 'about'"
+                     (click)="selectMenu('about')" routerLink="/home" fragment="whoweare">Who We Are</a>
+                </li>
+                <li>
+                  <a class="button-mobile cursor-pointer" [class.active]="selectedMenu === 'services'"
+                     (click)="selectMenu('services')" routerLink="/home" fragment="whatwedo">What We Do</a>
+                </li>
+                <li>
+                  <a class="button-mobile cursor-pointer" [class.active]="selectedMenu === 'projects'"
+                     (click)="selectMenu('projects')" routerLink="/home" fragment="projects">Projects</a>
+                </li>
+                <li>
+                  <a class="button-mobile cursor-pointer" [class.active]="selectedMenu === 'contact'"
+                     (click)="selectMenu('contact')" routerLink="/home" fragment="contactus">Contact Us</a>
+                </li>
+                <li>
+                  <a class="button-mobile cursor-pointer" [class.active]="selectedMenu === 'career'"
+                     (click)="selectMenu('career')" routerLink="/career" fragment="Career">Career</a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Desktop Navigation Menu -->
+    <div class="hidden lg:flex items-center gap-5">
+        <nav>
+          <ul class="flex gap-6 text-white font-medium">
+            <li>
+              <a class="menu-item cursor-pointer" [class.active]="selectedMenu === 'Home'" (click)="selectMenu('Home')" routerLink="/vyomnprojeccts/home" fragment="sliderSection">Home</a>
+            </li>
+            <li>
+              <a class="menu-item cursor-pointer" [class.active]="selectedMenu === 'about'" (click)="selectMenu('about')" routerLink="/home" fragment="whoweare">Who We Are</a>
+            </li>
+            <li>
+              <a class="menu-item cursor-pointer" [class.active]="selectedMenu === 'services'" (click)="selectMenu('services')" routerLink="/home" fragment="whatwedo">What We Do</a>
+            </li>
+            <li>
+              <a class="menu-item cursor-pointer" [class.active]="selectedMenu === 'projects'" (click)="selectMenu('projects')" routerLink="/home" fragment="projects">Projects</a>
+            </li>
+            <li>
+              <a class="menu-item cursor-pointer" [class.active]="selectedMenu === 'contact'" (click)="selectMenu('contact')" routerLink="/home" fragment="contactus">Contact Us</a>
+            </li>
+            <li>
+              <a class="menu-item cursor-pointer"
+                 [class.active]="selectedMenu === 'career'"
+                 (click)="selectMenu('career')"
+                 routerLink="/career">
+                Career
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button [routerLink]="'/connect'" class="bg-lightOrange hover:bg-darkOrange text-white font-semibold py-2 px-4 rounded-lg">
+            Let's Talk
+        </button>
+    </div>
+</div>
+
+

@@ -1,0 +1,147 @@
+
+.container {
+  max-width: 1200px;
+  margin-left: 18%;
+  margin-top: 50px;
+}
+
+
+.description {
+  color: #666666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  width: 306%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+
+
+/* Submit Button */
+.submit-button {
+  background-color: #ff6a00;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #383822;
+}
+
+
+// Social Media
+
+social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(255, 253, 253);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 0px;
+}
+
+/* hover effect for all icons */
+.social-icon:hover {
+  background: white;
+  color: inherit;
+}
+
+/* WhatsApp color */
+.social-icon.whatsapp:hover {
+  color: #25D366;
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+/* Email color*/
+.social-icon.email:hover {
+  color: #0078D7;
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+/* Facebook color */
+.social-icon.facebook:hover {
+  color: #1877F2;
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+/* Instagram */
+.social-icon.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  transform: scale(1.2);
+}
+
+/* YouTube */
+.social-icon.youtube:hover {
+  color: #FF0000;
+  background-color: #fff;
+  transform: scale(1.2);
+}
+/* Tooltip styling */
+.social-icon {
+  position: relative;
+}
+
+.social-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover::after {
+  opacity: 1; /* Show the tooltip on hover */
+  transform: translateX(-50%) translateY(-5px);
+}
